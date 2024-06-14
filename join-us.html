@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--CSS section-->
-
+    <link rel="shortcut icon" href="./assets/images/pipli favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="./assets/vendors/bootstrap-5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/vendors/owl-carousel/owl.theme.default.min.css" />
@@ -78,23 +78,87 @@
         <section class="join-us jost">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="./assets/images/join_us/1-01.png" alt="join-us-image" class="img-fluid">
+                    <img src="./assets/images/join_us/1-01.png" alt="join-us-image" class="w-100">
                 </div>
-                <div class="col-md-6 text-center py-5 mb-5">
-                    <img src="./assets/images/PIPLI LOGO PNG.webp" alt="" class="img-fluid" width="40%">
+                <div class="col-md-6 text-center py-2">
+                    <img src="./assets/images/PIPLI LOGO PNG.webp" alt="pipli-logo" class="img-fluid" width="20%">
+                    <div class="text-center">
+                        <img src="./assets/images/join_us/JOIN_US-01-removebg-preview.png" alt="new-distributor-logo"
+                            class="distributor w-50" style="filter: drop-shadow(2px 4px 6px #B1B1B1);">
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <h4>BROCHURE</h4>
-                            <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down" class="img-fluid arrow-down">
+                            <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down"
+                                class="img-fluid arrow-down">
                             <div class="position-relative">
-                                <a href="#" class="action-btn">DOWNLOAD</a>
+                                <a href="#" id="downloadBrochure" class="action-btn">DOWNLOAD</a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <h4>GOOGLE FORMS</h4>
-                            <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down" class="img-fluid arrow-down">
+                            <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down"
+                                class="img-fluid arrow-down">
                             <div class="position-relative">
-                                <a href="#" class="action-btn">SUBMIT FORMS</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQkU1vRhtAKHlXFxaTbDIt3la5IUCFhJbdqUbePsVpoSbieA/viewform?usp=sf_link"
+                                    target="_blank" class="action-btn">SUBMIT FORMS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
+                                src="./assets/images/join_us/JOIN_US-02-removebg-preview.png" alt="new-distributor-logo"
+                                class="distributor w-50" style="filter: drop-shadow(2px 4px 6px #B1B1B1);"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="existing-distributor-order-modal">
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog jost">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-5">
+                            <form action="#"
+                                class="row justify-content-center existing-distributor-form py-5 rounded-pill">
+                                <div class="col-md-2 mb-3">
+                                    <select name="" id="primarySelect" class="form-select">
+                                        <option value="#" selected disabled>select product</option>
+                                        <option value="mustard">MUSTARD OIL</option>
+                                        <option value="soyabean">SOYABEAN OIL</option>
+                                        <option value="rice-bran">RICE BRAN OIL</option>
+                                        <option value="palm">PALM OIL</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <select name="" id="secondarySelect" class="form-select">
+                                        <option value="#" selected disabled>select item</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="quantity" class="form-control" placeholder="Quantity">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="unitPrice" class="form-control" placeholder="Unit Price"
+                                        readonly>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="amount" class="form-control" placeholder="Amout" readonly>
+                                </div>
+                                <div class="col-md-10 mt-4 text-end">
+                                    <button type="submit"
+                                        class="btn btn-danger text-white fw-bold shadow">SUBMIT</button>
+                                </div>
+                            </form>
+
+                            <div class="ditributor-for-button text-center">
+                                <a href="#" id="downloadBtn"
+                                    class="btn distributor-btn">DISTRIBUTOR FORM</a>
                             </div>
                         </div>
                     </div>
@@ -135,6 +199,7 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="join-us.html">JOIN US</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -148,7 +213,116 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="./assets/js/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            var products = {
+                "mustard": [
+                    { "item": "POUCH 1 L", "price": 10 },
+                    { "item": "POUCH 500 ml", "price": 5 },
+                    { "item": "PET BOTTLE 1 L", "price": 12 },
+                    { "item": "PET BOTTLE 500 ml", "price": 6 },
+                    { "item": "PET BOTTLE 200 ml", "price": 3 },
+                    { "item": "HDPE JAR 5 L", "price": 25 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 50 },
+                    { "item": "TIN 15 Kg", "price": 100 }
+                ],
+                "soyabean": [
+                    { "item": "POUCH 1 L", "price": 11 },
+                    { "item": "POUCH 500 ml", "price": 6 },
+                    { "item": "PET BOTTLE 1 L", "price": 13 },
+                    { "item": "PET BOTTLE 500 ml", "price": 7 },
+                    { "item": "PET BOTTLE 200 ml", "price": 4 },
+                    { "item": "HDPE JAR 5 L", "price": 27 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 55 },
+                    { "item": "TIN 15 Kg", "price": 110 }
+                ],
+                "rice-bran": [
+                    { "item": "POUCH 1 L", "price": 9 },
+                    { "item": "POUCH 500 ml", "price": 4 },
+                    { "item": "PET BOTTLE 1 L", "price": 11 },
+                    { "item": "PET BOTTLE 500 ml", "price": 5 },
+                    { "item": "PET BOTTLE 200 ml", "price": 3 },
+                    { "item": "HDPE JAR 5 L", "price": 23 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 45 },
+                    { "item": "TIN 15 Kg", "price": 90 }
+                ],
+                "palm": [
+                    { "item": "POUCH 1 L", "price": 8 },
+                    { "item": "TIN 15 Kg", "price": 120 }
+                ]
+            };
+
+            $('#primarySelect').change(function () {
+                var selectedProduct = $(this).val();
+                var options = products[selectedProduct];
+                $('#secondarySelect').empty();
+                $('#secondarySelect').append($('<option>').text("select item"));
+                $.each(options, function (i, option) {
+                    $('#secondarySelect').append($('<option>').text(option.item));
+                });
+            });
+
+            $('#secondarySelect').change(function () {
+                var selectedItem = $(this).val();
+                var selectedProduct = $('#primarySelect').val();
+                var options = products[selectedProduct];
+                var selectedOption = options.find(option => option.item === selectedItem);
+                if (selectedOption) {
+                    $('#unitPrice').val(selectedOption.price);
+                    calculateAmount();
+                }
+            });
+
+            $('#quantity').on('input', function () {
+                calculateAmount();
+            });
+
+            function calculateAmount() {
+                var quantity = parseFloat($('#quantity').val());
+                var unitPrice = parseFloat($('#unitPrice').val());
+                var amount = isNaN(quantity) || isNaN(unitPrice) ? 0 : quantity * unitPrice;
+                $('#amount').val(amount.toFixed(2));
+            }
+
+            $('#downloadBtn').click(function () {
+                // Replace 'path/to/your/pdf/file.pdf' with the actual path to your PDF file
+                var pdfFilePath = './documents/Distributors Form.pdf';
+
+                // Creating a temporary anchor element
+                var link = $('<a href="' + pdfFilePath + '" download="Distributors Form.pdf"></a>');
+
+                // Appending the link to the body
+                $('body').append(link);
+
+                // Triggering the click event of the link
+                link[0].click();
+
+                // Removing the link from the body
+                $(link).remove();
+            });
+
+            $('#downloadBrochure').click(function () {
+                // Replace 'path/to/your/pdf/file.pdf' with the actual path to your PDF file
+                var pdfFilePath = './documents/BROCHURE.pdf';
+
+                // Creating a temporary anchor element
+                var link = $('<a href="' + pdfFilePath + '" download="BROCHURE.pdf"></a>');
+
+                // Appending the link to the body
+                $('body').append(link);
+
+                // Triggering the click event of the link
+                link[0].click();
+
+                // Removing the link from the body
+                $(link).remove();
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>
